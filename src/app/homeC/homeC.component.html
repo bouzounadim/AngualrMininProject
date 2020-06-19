@@ -1,0 +1,68 @@
+<div class="fixed-top">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Mini application Angualr</h5>
+      <span class="text-muted">Cette application permet de faire le CRUD des etudiant avec d'autre foncatioanlité</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div>
+ <p style="color: white;"> <img src="{{user.photoURL}}" alt="" style="vertical-align: middle;
+  border-style: none;
+  width: 48px;
+  border-radius: 51%;
+"> {{user.email}} <a id="e" (click)="logout()" > <i class="fa fa-sign-out" aria-hidden="true" style="margin-left: 11px;
+  padding: 10px;
+  border-left: 1px solid;"></i>
+   Logout</a></p>
+  </div>
+  </nav>
+</div>
+<div class="container-fluid">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col col-lg-2">
+      <p style="
+      margin-top: 40px;
+      margin-bottom: -39px;
+      /* margin-top: 19px; */
+      text-align: center;
+      font-size: larger;">Action a faire</p>
+ <hr style="margin-top: 46px; ">
+
+ <button type="button" class="btn btn-success" style="  width : 201px ;
+ " routerLink="add_student" >Ajouter Etudiant <i class="fa fa-plus" aria-hidden="true"></i>
+
+</button>
+
+<button type="button" class="btn btn-success" style="  width : 201px ;
+" routerLink="addTech" style="    width: 201px;
+/* color: chartreuse; */
+margin-top: 8px;
+background-color: #F44336;" >Ajouter Tecnlogies <i class="fa fa-plus" aria-hidden="true"></i>
+
+</button>
+<button type="button" class="btn btn-success" style="  width : 201px ;
+" routerLink="listTech" style="    width: 201px;
+/* color: chartreuse; */
+margin-top: 8px;
+background-color: #3F51B5;" >List Tecnlogies <i class="fa fa-asterisk" aria-hidden="true"></i>
+
+
+</button>
+<button type="button" class="btn btn-info" style="  width : 201px ; margin-top: 5px;
+" routerLink="user" >Acceuille <i class="fa fa-home" aria-hidden="true"></i>
+
+</button>
+
+    </div>
+  </div>
+</div>
+</div>
+

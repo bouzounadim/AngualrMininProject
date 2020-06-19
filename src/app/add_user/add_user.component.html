@@ -1,0 +1,75 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+    <img src="assets/images/a.png" alt="" style="    width: 222px;    ">
+    </div>
+    </div>
+    <form [formGroup]="addForm" (ngSubmit)="create()" ngNativeValidate>
+      <div class="form-group">
+        <label for="nom">Nom:</label>
+        <input type="text" formControlName="nom" placeholder="Nom" name="Nom" class="form-control" id="Nom" required>
+      </div>
+  
+      
+      <div class="form-group">
+        <label for="prenom">Prenom:</label>
+        <input type="text" formControlName="prenom" placeholder="Prenom" name="Prenom" class="form-control" id="Prenom" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="telephone">Telphone:</label>
+        <input  type="number" formControlName="telephone" placeholder="Telphone" name="Telphone" class="form-control" id="Telphone" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email :</label>
+        <input formControlName="email" placeholder="Email" name="Email" class="form-control" id="email">
+      </div>
+  
+      <div class="form-group">
+        <label for="dateNaissance">Date Naissance:</label>
+        <input type="date" formControlName="dateNaissance" placeholder="Date Naissance" name="dateNaissance" class="form-control" id="dateNaissance">
+      </div>
+  
+      <div class="form-group">
+        <label for="classe">Class:</label>   
+  <select name="classe" id="classe"    formControlName="classee" style="    width: 137px;
+  /* margin-right: 18px; */
+  margin-left: 14px;
+">
+    <option *ngFor="let item of classe" [ngValue]="item.nomClasse">{{item.nomClasse}}</option>
+  </select>
+
+
+
+    <label for="tech" style="margin-left: 62px;
+    margin-right: 22px; ">Technlogies <i class="fa fa-cubes" aria-hidden="true"></i>
+ : </label>   
+    <select name="tech" id="tech"  [(ngModel)]="selectop"  [ngModelOptions]="{standalone: true}" (change)="add()" style="    width: 137px;
+    ">
+      <option *ngFor="let item of techi" [value]="item.nomTech">{{item.nomTech}}</option>
+    </select>
+
+
+
+      </div>
+
+
+      <div class="form-group">
+        <label for="mait">Les Technlogies maitraisé:</label>
+        <input type="text" formControlName="tech"  [(ngModel)]="mat"   name="tech" class="form-control" id="tech" style="border: none;
+        background-color: #343a40;
+        color: white;
+        width: 380px;
+    " disabled>
+      </div>
+
+
+
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+      <button class="btn btn-success" style="    width: 300px;      ">Ajouter</button>
+      </div>
+      </div>
+    </form>
+  </div>

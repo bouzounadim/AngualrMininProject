@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "formation-e8b0f": {
+      "hosting": {
+        "ang-project": [
+          "formation-e8b0f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "formation-e8b0f"
+  }
+}

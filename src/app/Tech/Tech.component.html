@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-auto">
+    <img src="assets/images/o.png" alt="" style="    width: 222px;    ">
+    </div>
+    </div>
+    <form [formGroup]="formTech" (ngSubmit)="cretTech()" ngNativeValidate>
+      <div class="form-group">
+        <label for="nom">Nom:</label>
+        <input type="text" formControlName="nomTech" placeholder="Nom Technolgie" name="nomTech" class="form-control" id="Nom" required>
+      </div>
+      <div class="row justify-content-md-center">
+        <div class="col-md-auto">
+      <button class="btn btn-success" style="    width: 300px;      ">Ajouter Technologies</button>
+      </div>
+      </div>
+    </form>
+  </div>

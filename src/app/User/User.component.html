@@ -1,0 +1,63 @@
+<div class="row" style="    margin-bottom: -39px;
+">
+  <div class="col-md-4 offset-md-1">
+    <div class="input-group" style="width: 424px;
+    margin-bottom: 52px;">
+      <input type="text" class="form-control"  placeholder="Search by name..." [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}" (keyup)="searchByName()" >
+      <div class="input-group-append">
+        <span class="input-group-text"><i class="fa fa-search" aria-hidden="true"></i>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 offset-md-1">
+    <div class="btn-group" style="    margin-left: 237px;
+    ">
+ 
+    </div>
+  </div>
+</div>
+
+<hr>
+<div>
+<div class="list-group users-list">
+  <div *ngFor="let item of items" class="list-group-item list-group-item-action flex-column align-items-start"  >
+    <div class="row">
+      <div class="col col-md-2 image-col">
+        <img class="image" src="https://api.adorable.io/avatars/285/abott@adorable.png" style="border-radius: 50%;    width: 122px;
+        ">
+      </div>
+      <div class="col col-md-8 text-col" style=" font-size: 20px;       margin-top: 32px;
+      ">
+        <p class="mb-1">{{item.payload.doc.data().nom}} {{item.payload.doc.data().prenom}}</p>
+        <small>Classe : {{item.payload.doc.data().classee}}  </small>
+      </div>
+      <div class="col col-md-2 actions-col">
+        <button class="btn btn-outline-primary action animate__heartBeat"  (click)="viewDetails(item)"  data-toggle="modal" data-target="#exampleModal" type="button" style="width: 130px;    margin-bottom: 9px;
+        ">
+          CV <i class="fa fa-arrow-circle-o-right" aria-hidden="true" ></i>
+        </button>
+        <button class="btn btn-outline-danger action animate__heartBeat "  type="button" style="width: 130px;    margin-bottom: 9px;
+        " (click)="delete(item)" >
+          Supprimer  <i class="fa fa-ban" aria-hidden="true"></i>
+        </button>
+        <button class="btn btn-outline-info action animate__heartBeat"  (click)="go(item)"  type="button" style="width: 130px;     margin-bottom: 9px;
+        ">
+          Mis a jour <i class="fa fa-wrench" aria-hidden="true"></i>
+
+        </button>
+     
+      </div>
+    </div>
+  </div>
+  <app-Detailles [childMessage]="parentMessage" [childMessage2]="parentMessage2" ></app-Detailles>
+
+
+</div>
+
+
+
+</div>
+
+
+<!-- Modal -->
